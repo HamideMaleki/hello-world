@@ -4,9 +4,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 //import App from "./app";
 //import Product from "./components/product";
-import Products from "./components/products";
+//import Products from "./components/products";
 
-//import Products from "./components/functional/products";
+import Products from "./components/functional/products";
 //import Product from "./components/functional/product";
 
 //const element = <h1>Hellllooo</h1>

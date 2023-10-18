@@ -1,9 +1,9 @@
 import React, { Component, useState } from "react";
-const Product = (props) => {
-  const [count, setCount] = useState(0);
+const Product = ({ productName, count: propCount, children }) => {
+  const [count, setCount] = useState(propCount);
   return (
     <div>
-      <span className="m-2 text-info">{props.productName}</span>
+      <span className="m-2 text-info">{productName}</span>
       <span className="m-2 badge bg-primary">{format()}</span>
       <button onClick={handlIncrement} className="m-2 btn btn-sm btn-success">
         +
@@ -14,6 +14,7 @@ const Product = (props) => {
       <button onClick={handleDelete} className="m-2 btn btn-sm btn-danger">
         delete
       </button>
+      {children}
     </div>
   );
   function handlIncrement() {
