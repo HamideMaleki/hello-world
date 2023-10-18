@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 class Product extends Component {
   state = {
-    count: 2,
+    count: this.props.count,
   };
   render() {
     const { productName } = this.props;
+    // ok :    const { count } = this.props;
+    // ok :    const { count: c } = this.props;
     return (
       <div>
         {this.state.count !== 0 ? (
@@ -29,6 +31,7 @@ class Product extends Component {
             >
               delete
             </button>
+            {this.props.children}
           </>
         ) : (
           <h1>There is no product</h1>
